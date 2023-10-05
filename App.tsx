@@ -1,9 +1,9 @@
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StatusBar, StyleSheet } from "react-native";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useCallback } from "react";
 import { ThemeContext, theme } from "./src/contexts/ThemeContext";
-import { TodoScreen } from "./src/screens/TodoScreen";
+import { TodoScreen } from "./src/screens/ToDoScreen";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -26,6 +26,7 @@ export default function App() {
   return (
     <ThemeContext.Provider value={theme}>
       <SafeAreaView style={styles.container} onLayout={onLayoutRootView}>
+        <StatusBar barStyle={"light-content"} />
         <TodoScreen />
       </SafeAreaView>
     </ThemeContext.Provider>
@@ -34,7 +35,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0,
     backgroundColor: theme.colors.gray700,
+    flex: 1,
   },
 });
