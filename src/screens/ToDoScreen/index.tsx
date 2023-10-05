@@ -27,7 +27,6 @@ export const TodoScreen = () => {
     <>
       <Header />
       <AddTaskInput
-        style={styles.input}
         taskInput={newTaskInput}
         setTaskInput={setNewTaskInput}
         onAddNewTask={addTask}

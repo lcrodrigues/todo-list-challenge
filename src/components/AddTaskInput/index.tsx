@@ -4,14 +4,13 @@ import { AddTaskButton } from "../AddTaskButton";
 import { theme } from "../../contexts/ThemeContext";
 import { Task } from "../../screens/ToDoScreen";
 
-interface AddTaskInputProps extends ViewProps {
+type AddTaskInputProps = {
   taskInput: string;
   setTaskInput: (taskInput: string) => void;
   onAddNewTask: (task: Task) => void;
-}
+};
 
 export const AddTaskInput = ({
-  style,
   taskInput,
   setTaskInput,
   onAddNewTask,
@@ -29,7 +28,9 @@ export const AddTaskInput = ({
   };
 
   return (
-    <View style={[style, styles.container]}>
+    <View style={styles.container}>
+      <View style={styles.topHalf} />
+      <View style={styles.bottomHalf} />
       <TextInput
         value={taskInput}
         onChangeText={setTaskInput}
