@@ -3,12 +3,10 @@ import { theme } from "../../contexts/ThemeContext";
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: theme.colors.gray700,
-    alignItems: "center",
-    height: 120,
+    flex: 1,
+    backgroundColor: theme.colors.gray600,
+    paddingTop: 24,
   },
 
-  logo: {
-    marginTop: 24,
-  },
+  list: { paddingHorizontal: 24, paddingBottom: 24, paddingTop: 20 },
 });
